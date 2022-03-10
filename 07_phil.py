@@ -14,7 +14,9 @@ def delay(n):
 def philosopher_task(num:int, table: Table, cheat: CheatMonitor): 
     table.set_current_phil(num)
     while True:
-        print (f"Philosofer {num} thinking") print (f"Philosofer {num} wants to eat") table.wants_eat(num)
+        print (f"Philosofer {num} thinking") 
+        print (f"Philosofer {num} wants to eat") 
+        table.wants_eat(num)
         if num == 0 or num == 2:
             cheat.is_eating(num) 
         print(f"Philosofer {num} eating") 
@@ -36,5 +38,5 @@ def main():
     for i in range(NPHIL):
         philosofers[i].join()
 
-if __name__ == ’__main__’: 
+if __name__ == '__main__': 
     main()
